@@ -145,7 +145,7 @@ The expectation is that you use _either_ `clojure.core.cache` _or_
     ;=> 1
 
     ;; unique to the wrapped API:
-    (w/lookup-or-miss C3 :b (constantly 42))
+    (w/lookup-or-miss C3 :b (fn [& args] 42))
 
     ;=> 42
 
